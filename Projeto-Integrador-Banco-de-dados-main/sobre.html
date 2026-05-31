@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós - Pizzaria Forno a Lenha</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    /* Define altura total da tela */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4e1d2;
+      color: #333;
+    }
+
+    /* Faz o body ocupar a tela inteira e empurrar o footer para baixo */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #8B0000; /* vermelho vinho */
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffd700; /* amarelo dourado */
+    }
+
+    .navbar .ativo {
+      border-bottom: 2px solid #ffd700;
+    }
+
+    /* Conteúdo principal */
+    main {
+      flex: 1; /* ocupa o espaço restante da tela */
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      color: #8B0000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Rodapé fixo ao final da página */
+    footer {
+      background-color: #6b4f3f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">Início</a>
+      <a href="menu.html">Cardápio</a>
+      <a href="sobre.html" class="ativo">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <h1>Sobre Nós</h1>
+      <p>
+        A <strong>Pizzaria Forno a Lenha</strong> nasceu da paixão por pizza e pelo sabor artesanal.
+        Desde o início, nosso objetivo é oferecer pizzas preparadas com ingredientes frescos, massa leve
+        e assadas no tradicional forno a lenha — garantindo aquele sabor caseiro que todo mundo adora.
+      </p>
+      <p>
+        Aqui, cada pedido é feito com carinho e dedicação para proporcionar uma experiência deliciosa e acolhedora
+        para você e sua família.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pizzaria Forno a Lenha. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
