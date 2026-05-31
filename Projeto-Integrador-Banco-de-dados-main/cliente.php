@@ -21,7 +21,7 @@ require 'conecta.php';
             <input type="text" name="nome" required>
             
             <label for="cpf">CPF:</label>
-            <input type="number" name="cpf" step="11" placeholder="000.000.000-00">
+            <input type="text" name="cpf" placeholder="000.000.000-00">
 
             <label for="email">E-mail:</label>
             <input type="text" name="email">
@@ -30,7 +30,7 @@ require 'conecta.php';
             <input type="text" name="endereco">
             
             <label for="telefone">Telefone/Celular:</label>
-            <input type="number" name="telefone" step="11" placeholder="00 0 0000-0000">
+            <input type="text" name="telefone" placeholder="00 0 0000-0000">
 
             
             <input type="submit" value="Salvar Cliente">
@@ -56,10 +56,10 @@ require 'conecta.php';
             echo " <tr>";
             echo " <th>" . $row['id_cliente'] . "</th>";
             echo " <th>" . $row['nome'] . "</th>";
-            echo " <th>" . number_format($row['cpf'], 3, '.', 3, '.', 3, '-', 2) . "</th>";
+            echo " <th>" . $row['cpf'] . "</th>";
             echo " <th>" . $row['email'] . "</th>";
             echo " <th>" . $row['endereco'] . "</th>";
-            echo " <th>" . number_format($row['telefone_celular'], 11) . "</th>";
+            echo " <th>" . $row['telefone_celular'] . "</th>";
             echo " </tr>";
             }
             echo "</table>";

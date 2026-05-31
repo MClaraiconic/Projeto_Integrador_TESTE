@@ -30,7 +30,7 @@ require 'conecta.php';
             <input type="text" name="endereco_pedido">
             
             <label for="contato_pedido">Telefone/Celular:</label>
-            <input type="number" name="contato_pedido" step="11" placeholder="00 0 0000-0000">
+            <input type="text" name="contato_pedido">
 
             
             <input type="submit" value="Salvar Pedido">
@@ -58,7 +58,7 @@ require 'conecta.php';
             echo " <th>" . $row['cliente_pedido'] . "</th>";
             echo " <th>" . $row['descricao_pedido'] . "</th>";
             echo " <th>" . $row['endereco_pedido'] . "</th>";
-            echo " <th>" . number_format($row['contato_pedido'], 2, 9) . "</th>";
+            echo " <th>" . $row['contato_pedido'] . "</th>";
             echo " </tr>";
             }
             echo "</table>";
