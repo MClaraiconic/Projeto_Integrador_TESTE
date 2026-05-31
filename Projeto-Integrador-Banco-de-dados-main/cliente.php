@@ -59,7 +59,7 @@ require 'conecta.php';
             echo " <th>" . number_format($row['cpf'], 3, '.', 3, '.', 3, '-', 2) . "</th>";
             echo " <th>" . $row['email'] . "</th>";
             echo " <th>" . $row['endereco'] . "</th>";
-            echo " <th>" . number_format($row['telefone_celular'], 2, 9) . "</th>";
+            echo " <th>" . number_format($row['telefone_celular'], 11) . "</th>";
             echo " </tr>";
             }
             echo "</table>";
