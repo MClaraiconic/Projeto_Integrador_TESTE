@@ -21,7 +21,7 @@ require 'conecta.php';
             <input type="text" name="nome" required>
             
             <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" placeholder="000.000.000-00">
+            <input type="text" name="cpf">
 
             <label for="email">E-mail:</label>
             <input type="text" name="email">
@@ -30,7 +30,7 @@ require 'conecta.php';
             <input type="text" name="endereco">
             
             <label for="telefone">Telefone/Celular:</label>
-            <input type="text" name="telefone" placeholder="00 0 0000-0000">
+            <input type="text" name="telefone">
 
             
             <input type="submit" value="Salvar Cliente">
