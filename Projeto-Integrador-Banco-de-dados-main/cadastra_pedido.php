@@ -20,11 +20,11 @@ require 'conecta.php';
 <main>
 <?php
 
-$cliente_pedido =  $_POST['nome'];
-$status_entrega= $_POST['CPF'];
-$descricao_pedido = $_POST['email'];
-$endereco_pedido = $_POST['endereco'];
-$contato_pedido = $_POST['telefone'];
+$cliente_pedido =  $_POST['cliente_pedido'];
+$status_entrega= $_POST['status_entrega'];
+$descricao_pedido = $_POST['descricao_pedido'];
+$endereco_pedido = $_POST['endereco_pedido'];
+$contato_pedido = $_POST['contato_pedido'];
 
 if(trim($endereco_pedido) == ""){
     die("Endereço não pode ser nulo");
