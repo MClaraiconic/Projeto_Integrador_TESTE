@@ -21,7 +21,7 @@ require 'conecta.php';
 <?php
 
 $nome =  $_POST['nome'];
-$CPF= $_POST['CPF'];
+$cpf= $_POST['cpf'];
 $email = $_POST['email'];
 $endereco = $_POST['endereco'];
 $telefone = $_POST['telefone'];
