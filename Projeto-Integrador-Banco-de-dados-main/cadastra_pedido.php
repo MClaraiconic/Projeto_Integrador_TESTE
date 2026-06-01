@@ -2,7 +2,6 @@
 
 require 'conecta.php';
 
-
 ?>
 <!doctype html>
 <html>
