@@ -30,7 +30,7 @@ require 'conecta.php';
             <input type="text" name="endereco">
             
             <label for="telefone">Telefone/Celular:</label>
-            <input type="number" name="telefone" placeholder="0">
+            <input type="number" name="telefone">
 
             
             <input type="submit" value="Salvar Cliente">
