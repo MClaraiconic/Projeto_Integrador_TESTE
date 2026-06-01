@@ -59,7 +59,7 @@ require 'conecta.php';
             echo " <th>" . $row['cpf'] . "</th>";
             echo " <th>" . $row['email'] . "</th>";
             echo " <th>" . $row['endereco'] . "</th>";
-            echo " <th>" . $row['telefone_celular'] . "</th>";
+            echo " <th>" . $row['telefone'] . "</th>";
             echo " </tr>";
             }
             echo "</table>";
