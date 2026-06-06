@@ -2,7 +2,6 @@
 
 require 'conecta.php';
 
-
 ?>
 <!doctype html>
 <html>
@@ -11,6 +10,7 @@ require 'conecta.php';
 	<meta lang="pt-br">
     <meta charset="UTF-8">
 	<link rel="stylesheet" href="css/admin_menu.css" >
+    <link rel="stylesheet" href="css/buton.css" >
 	
 </header>
 <body>
@@ -35,31 +35,39 @@ require 'conecta.php';
     </div>
 
     <section>
-        <h1 style="text-align: center;">Tabela de Produtos</h1>
-        <div class="tabela-produtos">
-            <?php
-            $sql = "SELECT * FROM produto";
-            $stmt = $pdo->query($sql);
-            echo "<table border=1>";
+    <h1 style="text-align: center;">Tabela de Produtos</h1>
+    <div class="tabela-produtos">
+        <?php
+        $sql = "SELECT * FROM produto";
+        $stmt = $pdo->query($sql);
+        
+        echo "<table border=1>";
+        echo " <tr>";
+        echo " <th>ID</th>";
+        echo " <th>Descrição</th>";
+        echo " <th>Sabor</th>";
+        echo " <th>Preço</th>";
+        echo " <th>Ações</th>"; // Nova coluna
+        echo " </tr>";
+        
+        while ($row = $stmt->fetch()) {
             echo " <tr>";
-            echo " <th>ID</th>";
-            echo " <th>Descrição</th>";
-            echo " <th>Sabor</th>";
-            echo " <th>Preço</th>";
+            echo " <td>" . $row['id_produto'] . "</td>";
+            echo " <td>" . $row['descricao'] . "</td>";
+            echo " <td>" . $row['sabor'] . "</td>";
+            echo " <td>R$ " . number_format($row['preco'], 2, ',', '.') . "</td>";
+            
+            // Botões de Ação passando o ID via URL (?id=...)
+            echo " <td>";
+            echo "  <a href='edit_produto.php?id=" . $row['id_produto'] . "' class='btn-acao btn-editar'>Editar</a>";
+            echo "  <a href='deleta_produto.php?id=" . $row['id_produto'] . "' class='btn-acao btn-excluir' onclick=\"return confirm('Tem certeza que deseja excluir este produto?')\">Excluir</a>";
+            echo " </td>";
+            
             echo " </tr>";
-            while ($row = $stmt->fetch()) {
-            echo " <tr>";
-            echo " <th>" . $row['id_produto'] . "</th>";
-            echo " <th>" . $row['descricao'] . "</th>";
-            echo " <th>" . $row['sabor'] . "</th>";
-            echo " <th>R$ " . number_format($row['preco'], 2, ',', '.') . "</th>";
-            echo " </tr>";
-            }
-            echo "</table>";
-?>
-        </div>
-    </section>
-</main>
+        }
+        echo "</table>";
+        ?>
+    </div>
 <?php
 	//Com loop usando for
 	/*

@@ -81,21 +81,3 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #880909;
 }
-
-/* Estilização da Lista */
-.lista-produtos {
-    display: flex;
-    flex-wrap: wrap;       /* Se tiver muitos, ele pula para a linha de baixo */
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-}
-
-.produto-card {
-    background: #EDD9CC;
-    border-left: 5px solid #333;
-    padding: 15px;
-    width: 250px;
-    border-radius: 4px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-}
