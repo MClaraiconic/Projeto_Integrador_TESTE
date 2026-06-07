@@ -1,0 +1,249 @@
+/* Paleta:
+#806550 (marrom rústico) 
+#B8A597 (bege acinzentado)
+#EDD9CC (creme claro)
+#B22008 (vermelho intenso)
+#880909 (vermelho escuro)
+*/
+ 
+/* Reset, serve pra deixar tudo igual em qualquer navegador */  
+* {
+  margin: 0; /*remove o espaçamento externo padrão dos elementos. */
+  padding: 0; /*remove o espaçamento interno padrão dos elementos. */
+  box-sizing: border-box; /*faz com que largura e altura de caixas incluam as bordas e o padding, facilitando o controle do layout. */
+}
+
+body {  /*Corpo da página */
+  font-family: "Poppins", Arial, sans-serif; /*define a fonte do texto */
+  background: #EDD9CC; /*define a cor de fundo da página (um creme claro).  */
+  color: #333; /*define a cor padrão do texto (cinza escuro quase preto) */
+}
+
+/* Navbar ( Menu de navegação*/
+.navbar {
+  height: 70px;
+  display: flex; /*transforma a navbar em um container flexível. */
+  justify-content: space-between; /*joga os itens para as extremidades (um na esquerda, outro na direita, espaço no meio). */
+  align-items: center; /*centraliza os itens na vertical. */
+  padding: 20px 50px; /*adiciona espaçamento 20pixels em cima/baixo e 50pixels nas laterais. */
+  background: #880909; /* vermelho escuro */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .menu a:hover {
+  color: #B22008; /* vermelho vivo */
+}
+
+/* Hero ilustrativo */
+/* Hero tela cheia */
+.hero { /*seleciona a seção com a classe hero. */
+  display: flex; /*transforma o Hero em um container flexível. */
+  align-items: center; /*alinha os elementos no meio vertical da tela.*/
+  justify-content: center; /* centraliza os elementos horizontalmente.*/
+  height: 100vh; /* ocupa toda a tela */
+  background: url("https://d2yghbees9788u.cloudfront.net/foodconnection/2022/03/Alternativas-buscam-reduzir-o-uso-de-lenha-nas-pizzarias.png")
+              no-repeat center center/cover; /* imagem de fundo */
+  position: relative; /*permite que elementos dentro do Hero sejam posicionados em relação a ele. */
+  color: white; /*define a cor do texto como branca, para contrastar com o fundo.*/
+  text-align: center; /*alinha todo o conteúdo de texto no centro.*/
+}
+
+/* Camada de cor sobre a imagem (opcional para contraste) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* escurece a imagem para o texto aparecer */
+}
+
+/* Texto do hero */
+.hero-right {
+  position: relative;
+  z-index: 1; /* fica acima da camada escura */
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-right h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.hero-right h1 {
+  font-size: 3em;
+  color: #EDD9CC; /* creme da paleta */
+}
+
+.hero-right h1 span {
+  color: #B22008; /* vermelho intenso */
+}
+
+.hero-right p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #f5f5f5;
+}
+
+
+
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #B22008, #880909);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Seções */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #880909;
+}
+
+/* Cardápio */
+/* Cardápio */
+.cardapio {
+  background: #EDD9CC; /* creme da paleta */
+}
+
+.cardapio h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #880909; /* vermelho escuro da paleta */
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #B22008; /* vermelho vibrante */
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #333;
+}
+
+
+
+/* Formulário */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 2px solid #B8A597;
+  border-radius: 10px;
+  font-size: 1em;
+  background: #fff;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  background: linear-gradient(90deg, #B22008, #880909);
+  color: white;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+  background: #806550;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre a logo e o texto */
+}
+
+.logo img {
+  max-height: 78px; /* ajuste o tamanho da logo */
+  width: auto;
+  object-fit: contain;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section{
+  text-align: center;
+}
