@@ -1,0 +1,83 @@
+ul {
+    list-style-type: none; /* Remove os pontos da lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Cor de fundo do menu */
+    font-family: Arial, sans-serif;
+}
+
+li {
+    float: left; /* Alinha os itens um ao lado do outro */
+}
+
+li a {
+    display: block;
+    color: white; /* Cor do texto */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Muda a cor quando o mouse passa por cima */
+li a:hover {
+    background-color: #111;
+}
+
+/* Estilo especial para o botão "Sair" (opcional) */
+li a[href="logout.php"] {
+    color: #ff4d4d;
+}
+
+/* Configurações Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Itens um abaixo do outro */
+    align-items: center;    /* Centraliza na horizontal */
+    padding: 20px;
+    gap: 30px;              /* Espaço entre o formulário e a lista */
+}
+
+/* Estilização do Formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Inputs um abaixo do outro */
+    background: #EDD9CC;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #B22008;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #880909;
+}
